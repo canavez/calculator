@@ -36,11 +36,11 @@ function App() {
 
   const resolve = () => {
     if (operation === "/") {
-      setResult(parseFloat(numUm / result).toFixed(5))
+      setResult(Math.round((parseFloat(numUm / result))*100)/100)
       setNumUm(0)
       setOperation("")
     } else if (operation === "*") {
-      setResult(parseFloat(numUm * result).toFixed(5))
+      setResult(Math.round((parseFloat(numUm * result))*100)/100)
       setNumUm(0)
       setOperation("")
     } else if (operation === "-") {
